@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="帅气">
+    <style>
+        body{font-family: 'Microsoft YaHei',serif}
+        body,dl,dd,h1,p,h2,h3,h4,h5,h6{margin:0}
+        ol,ul,li,a{margin:0;padding:0;list-style:none}
+        a{text-decoration: none}
+        img{border:none}
+        body{
+            font-size: 14px;
+        }
+        #wap>div>div{
+            width: 600px;
+            margin:0 auto;
+            line-height: 50px;
+
+        }
+        #wap>div>div{
+            margin-bottom: 30px;
+            height: 50px;
+            border: 1px solid red;
+            position: relative;
+        }
+        #wap>div>div>input{
+            font-size: 14px;
+            width: 250px;
+            padding: 10px;
+        }
+        #wap>div label{
+            display: block;
+            width: 100px;
+            text-align: right;
+            float: left;
+        }
+        .btn{
+            text-align: center;
+        }
+        #btn{
+
+            height: 35px;
+            width: 80px;
+            font-size: 20px;
+        }
+        #wap>div>div>span{
+            display: block;
+            position: absolute;
+            width: 180px;
+            height: 40px;
+            right: 0;
+            top:0;
+
+            padding: 0 20px;
+            background-color: red;
+        }
+    </style>
+    <meta name="description" content="帅气">
+    <meta name="Author" content="帅气T元素">
+    <title>T元素</title>
+    <script src="../js/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="../css/1.css">
+    <!--    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>-->
+
+</head>
+    <body>
+        <div id="wap">
+            <div>
+                <div class="use"><label>用户名：</label><input type="text"><span>ddddd</span></div>
+                <div class="pwd"><label>密码：</label><input type="password"><span>dsdd</span></div>
+                <div class="pwds"><label>确认密码：</label><input type="password"><span>dsdd</span></div>
+                <div class="yx"><label>邮箱：</label><input type="text"><span>3333</span></div>
+				
+				<div class="btn"><button id="btn">注册</button></div>
+            </div>
+            
+        </div>
+    <script>
+		
+		let tf = [false,false,false,false];
+
+
+		//按钮
+        $("#btn").on("click",function () {
+
+			let tw = tf.every(v => v === true);
+            if (tw){
+                $.post("../data/loog.php",`{
+                    "use": "${$(".use").find("input").val()}",
+                    "pwd": "${$(".pwd").find("input").val()}",
+                    "yx": "${$(".yx").find("input").val()}"
+                }`,function (res) {
+                    $("body").append(res);
+
+                    //[].forEach.call(a,(v,i)=>console.log(v,i))
+
+                })
+
+            }else {
+                alert("请正确填写信息");
+            }
+
+
+
+        });
+
+
+
+
+
+        //用户名
+        $(".use>input").on("change",function(){
+
+
+            if ($(".use>input").val().length > 2){
+
+            $.post("../data/getUse.php",`{"use": "${$(".use").find("input").val()}"}`,function (res) {
+
+                let a = res.replace(/\s|\n|\r/g,"");
+                $(".use>span").html(JSON.parse(a).msg);
+                tf[0] = true;
+
+            })
+
+            }else if($(".use>input").val() === ""){
+                $(".use>span").html("");
+            }else {
+                $(".use>span").html("用户名为数不能小于3");
+            }
+
+            tf[0] = false;
+
+        });
+        //密码
+        $(".pwd>input").on("keyup",function(){
+            tf[2] = false;
+            if($(".pwd>input").val().length > 5) {
+                $(".pwd>span").html("√");
+                tf[1] = true;
+                return;
+            } else if($(".pwd>input").val() === ""){
+                $(".pwd>span").html("");
+            } else {
+                $(".pwd>span").html("密码不能小于6位");
+            }
+            tf[1] = false;
+        });
+
+
+
+
+
+        let reg = new RegExp(/^\w{6,15}@\w{2,10}.(com|cn|net)$/g);
+        //确认密码
+        $(".pwds>input").on("keyup",function(){
+           if($(".pwds>input").val() === $(".pwd>input").val()) {
+               $(".pwds>span").html("√");
+               tf[2] = true;
+               return;
+           } else if($(".pwds>input").val() === ""){
+               $(".pwds>span").html("");
+           } else {
+               $(".pwds>span").html("两次密码输入不一样");
+           }
+            tf[2] = false;
+        });
+
+
+        //邮箱
+        $(".yx>input").on("keyup",function(){
+            let b = $(".yx>input").val();
+
+
+
+            if (!reg.test(b)){
+                $(".yx>span").html("邮箱格式不正确");
+            }else if($(".yx>input").val() === ""){
+                $(".yx>span").html("");
+            }else {
+                $(".yx>span").html("√");
+                tf[3] = true;
+                return;
+            }
+            tf[3] = false;
+        })
+		
+    </script>
+    </body>
+</html>

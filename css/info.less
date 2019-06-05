@@ -1,0 +1,269 @@
+@h-c:#f12f04;@h-t:#ffffff;@h-t-h:#ffffff;@inpBtn:#ff0036;
+.wap{
+  width: 1230px;
+  margin: 0 auto;
+}
+.clearfix:after{
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+}
+.h-nav{
+  background-color: @h-c;
+  color: white;
+  >div{
+    width: 1230px;
+    height: 32px;
+    margin: 0 auto;
+    line-height: 32px;
+    .h-l{
+      >div{
+        float: left;
+      }
+      .y{
+        display: none;
+      }
+
+      a{
+        color: @h-t;
+        padding: 0 10px;
+        text-decoration: none;
+        &:hover{
+          color: @h-t-h;
+        }
+      }
+    }
+    .h-r{
+      >ul{
+
+        float: right;
+        margin: 0;
+        li{
+          float: left;
+          position: relative;
+          padding: 0 10px;
+          border: 1px solid @h-c;
+          border-top:0;
+          border-bottom:0;
+          &:hover>b{
+            transform: rotate(180deg);
+            transform-origin: 50% 30%;
+            transition: transform .2s ease-in;
+          }
+        }
+        li:nth-child(1),
+        li:nth-child(3),
+        li:nth-child(7),
+        li:nth-child(8){
+          padding: 0 14px 0 10px;
+
+        }
+
+        li:nth-child(1){
+          &:hover{
+            background-color: #fff;
+            color: #ff0036;
+            border: 1px solid #ccc;
+            border-top:0;
+            border-bottom:0;
+          }
+          .item{
+            position:absolute;
+            padding: 8px 10px;
+            border:1px solid #ccc;
+            border-top: 0;
+            width: 94px;
+            font-size: 12px;
+            top: 32px;
+            background-color: #fff;
+            left: -1px;
+            a{
+              display:block;
+              width: 74px;
+              height: 40px;
+              text-align: center;
+            }
+
+          }
+
+        }
+        li:nth-child(4){
+          padding: 0 2px 0 5px;
+          height: 14px;
+          top:9px;
+          border-left: 1px solid #bbb;
+        }
+
+        b{
+          position: absolute;
+          width: 0;
+          height: 0;
+          border: 3px solid transparent;
+          top:15px;
+          right:6px;
+          border-top-color: #bbb;
+
+        }
+      }
+
+
+    }
+  }
+
+
+
+}
+.searchInput{
+  .logo{
+    width: 240px;
+    height: 90px;
+    //line-height: 90px;
+    text-align: center;
+    padding-top: 26px;
+    img{
+      width: 130px;
+      height: 48px;
+
+    }
+  }
+  .search{
+
+  }
+}
+.info{
+  position: relative;
+  .left{
+    float: left;
+    position: relative;
+    width: 460px;
+    .item{
+
+      .huakuai{
+        position: absolute;
+        background-color: rgba(3,3,3,.3);
+        left: 0;
+        top: 0;
+        display: none;
+      }
+      position: relative;
+      height: 418px;
+      width: 418px;
+      .active{
+        display: block!important;
+      }
+      img{
+        position: absolute;
+        height: 418px;
+        width: 418px;
+        display: none;
+      }
+    }
+    .tab{
+      margin-top: 1px;
+      .active{
+        border-color: #000!important;
+      }
+      img{
+        width: 60px;
+        height: 60px;
+        margin-left: 16px;
+        margin-top: 22px;
+        border: 2px solid #fff;
+
+      }
+    }
+    .fdj{
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 440px;
+      width: 418px;
+      height: 418px;
+      border:1px solid red;
+      display: none;
+      .active{
+        display: block!important;
+      }
+      img{
+        display: none;
+        position: absolute;
+      }
+    }
+
+  }
+  .right{
+    float:left;
+    width: 530px;
+    .title{
+      padding: 20px 10px 12px;
+      h1{
+        font-size: 16px;
+      }
+    }
+
+    .price{
+      width: 510px;
+      padding: 0 5px;
+      margin-right: 20px;
+      background:url("../img/bgi-1.png") no-repeat;
+      dl{
+        padding: 5px 0;
+        line-height: 32px;
+      }
+      dt,dd{
+        float: left;
+
+      }
+      dt{
+        font-size: 12px;
+        width: 69px;
+        margin-left: 8px;
+        vertical-align: middle;
+        color: #999999;
+      }
+      dd{
+        color: #ff0036;
+
+        span{
+          font-size: 24px;
+        }
+
+        em{
+          font-size: 18px;
+          font-style: normal;
+        }
+      }
+    }
+    .area{
+      dt,dd{
+        float: left;
+        font-size: 12px;
+        line-height: 36px;
+      }
+      dt{
+        color: #999999;
+        width: 50px;
+        height: 36px;
+
+        margin: 0 10px;
+
+      }
+
+    }
+    .sum{
+      input{
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        width: 44px;
+      }
+      span{
+        cursor:pointer;
+      }
+    }
+  }
+
+}

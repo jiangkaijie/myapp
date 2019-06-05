@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="帅气">
+    <meta name="description" content="帅气">
+    <meta name="Author" content="帅气T元素">
+    <title>T元素</title>
+    <style>
+        body{font-family: 'Microsoft YaHei',serif}
+        body,dl,dd,h1,p,h2,h3,h4,h5,h6{margin:0}
+        ol,ul,li,a{margin:0;padding:0;list-style:none}
+        a{text-decoration: none}
+        img{border:none}
+
+
+    </style>
+    <script src="./data/node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="./css/info.css">
+    <script src="js/info.js"></script>
+</head>
+    <body>
+        <div id="wap">
+            <div class="h-nav"></div>
+            <div class="searchInput">
+                <div class="wap">
+                    <div class="logo"><img src="./img/TB-info-logo.png" alt=""></div>
+                </div>
+            </div>
+
+        </div>
+    <script>
+         $.get("./index/nav.html",function (data) {
+             $(".h-nav").append(data)
+         })
+    </script>
+    </body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="帅气">
+    <meta name="description" content="帅气">
+    <meta name="Author" content="帅气T元素">
+    <title>T元素</title>
+    <style>
+        body{font-family: 'Microsoft YaHei',serif}
+        body,dl,dd,h1,p,h2,h3,h4,h5,h6{margin:0}
+        ol,ul,li,a{margin:0;padding:0;list-style:none}
+        a{text-decoration: none}
+        img{border:none}
+        #wap{
+            width: 600px;
+            height: 500px;
+            border:1px solid red;
+        }
+        #wap>div{
+
+        }
+    </style>
+    <script src="../js/jquery-3.4.1.js"></script>
+</head>
+    <body>
+        <div id="wap">
+            <div>
+                <div class="use"><label>用户名：</label><input type="text"></div>
+                <div class="pwd"><label>密码：</label><input type="password"></div>
+                <div class="btn"><button id="btn">登入</button></div>
+            </div>
+
+
+
+        </div>
+    <script>
+
+
+
+        $("#btn").on("click",function(){
+            let data = {
+                "use": $(".use").find("input").val(),
+                "pwd": $(".pwd").find("input").val()
+            };
+
+            $.get("../data/denglu.php",data,
+                function(res){
+                   res = JSON.parse(res);
+                    if (res.msg){
+                        let data = {
+                            useName: res.name,
+                            status: true
+                        };
+
+                        document.cookie = "use=" + JSON.stringify(data) + ";path=/";
+                        location.href="../dome.html";
+                    }
+                })
+
+
+
+        });
+
+
+
+    </script>
+    </body>
+</html>

@@ -1,0 +1,135 @@
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+}
+.wap > .h-nav {
+  background-color: #f12f04;
+  color: white;
+}
+.wap > .h-nav > div {
+  width: 1230px;
+  height: 32px;
+  margin: 0 auto;
+  line-height: 32px;
+}
+.wap > .h-nav > div .h-l > div {
+  float: left;
+}
+.wap > .h-nav > div .h-l .y {
+  display: none;
+}
+.wap > .h-nav > div .h-l a {
+  color: #ffffff;
+  padding: 0 10px;
+  text-decoration: none;
+}
+.wap > .h-nav > div .h-l a:hover {
+  color: #ffffff;
+}
+.wap > .h-nav > div .h-r > ul {
+  float: right;
+  margin: 0;
+}
+.wap > .h-nav > div .h-r > ul li {
+  float: left;
+  position: relative;
+  padding: 0 10px;
+  border: 1px solid #f12f04;
+  border-top: 0;
+  border-bottom: 0;
+}
+.wap > .h-nav > div .h-r > ul li:hover > b {
+  transform: rotate(180deg);
+  transform-origin: 50% 30%;
+  transition: transform 0.2s ease-in;
+}
+.wap > .h-nav > div .h-r > ul li:nth-child(1),
+.wap > .h-nav > div .h-r > ul li:nth-child(3),
+.wap > .h-nav > div .h-r > ul li:nth-child(7),
+.wap > .h-nav > div .h-r > ul li:nth-child(8) {
+  padding: 0 14px 0 10px;
+}
+.wap > .h-nav > div .h-r > ul li:nth-child(1):hover {
+  background-color: #fff;
+  color: #ff0036;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-bottom: 0;
+}
+.wap > .h-nav > div .h-r > ul li:nth-child(1) .item {
+  position: absolute;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-top: 0;
+  width: 94px;
+  font-size: 12px;
+  top: 32px;
+  background-color: #fff;
+  left: -1px;
+}
+.wap > .h-nav > div .h-r > ul li:nth-child(1) .item a {
+  display: block;
+  width: 74px;
+  height: 40px;
+  text-align: center;
+}
+.wap > .h-nav > div .h-r > ul li:nth-child(4) {
+  padding: 0 2px 0 5px;
+  height: 14px;
+  top: 9px;
+  border-left: 1px solid #bbb;
+}
+.wap > .h-nav > div .h-r > ul b {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  top: 15px;
+  right: 6px;
+  border-top-color: #bbb;
+}
+.wap > .shopping {
+  border: 1px solid red;
+}
+.wap > .shopping > div {
+  margin: 10px 40px;
+}
+.wap > .shopping > div > div {
+  line-height: 100px;
+  float: left;
+  vertical-align: middle;
+  text-align: center;
+}
+.wap > .shopping > div .pic {
+  font-size: 0;
+}
+.wap > .shopping > div .pic img {
+  float: left;
+}
+.wap > .shopping > div .title {
+  width: 45%;
+  padding: 0 20px;
+}
+.wap > .shopping > div .price {
+  width: 5%;
+}
+.wap > .shopping > div .sum {
+  width: 15%;
+}
+.wap > .shopping > div .total {
+  width: 10%;
+}
+.wap .bottom > div {
+  float: right;
+  padding: 0 50px;
+}
+.wap .bottom > div .total-val {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+/*# sourceMappingURL=shopping.css.map */

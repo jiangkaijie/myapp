@@ -1,0 +1,230 @@
+.wap {
+  width: 1230px;
+  margin: 0 auto;
+}
+.clearfix:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+}
+.h-nav {
+  background-color: #f12f04;
+  color: white;
+}
+.h-nav > div {
+  width: 1230px;
+  height: 32px;
+  margin: 0 auto;
+  line-height: 32px;
+}
+.h-nav > div .h-l > div {
+  float: left;
+}
+.h-nav > div .h-l .y {
+  display: none;
+}
+.h-nav > div .h-l a {
+  color: #ffffff;
+  padding: 0 10px;
+  text-decoration: none;
+}
+.h-nav > div .h-l a:hover {
+  color: #ffffff;
+}
+.h-nav > div .h-r > ul {
+  float: right;
+  margin: 0;
+}
+.h-nav > div .h-r > ul li {
+  float: left;
+  position: relative;
+  padding: 0 10px;
+  border: 1px solid #f12f04;
+  border-top: 0;
+  border-bottom: 0;
+}
+.h-nav > div .h-r > ul li:hover > b {
+  transform: rotate(180deg);
+  transform-origin: 50% 30%;
+  transition: transform 0.2s ease-in;
+}
+.h-nav > div .h-r > ul li:nth-child(1),
+.h-nav > div .h-r > ul li:nth-child(3),
+.h-nav > div .h-r > ul li:nth-child(7),
+.h-nav > div .h-r > ul li:nth-child(8) {
+  padding: 0 14px 0 10px;
+}
+.h-nav > div .h-r > ul li:nth-child(1):hover {
+  background-color: #fff;
+  color: #ff0036;
+  border: 1px solid #ccc;
+  border-top: 0;
+  border-bottom: 0;
+}
+.h-nav > div .h-r > ul li:nth-child(1) .item {
+  position: absolute;
+  padding: 8px 10px;
+  border: 1px solid #ccc;
+  border-top: 0;
+  width: 94px;
+  font-size: 12px;
+  top: 32px;
+  background-color: #fff;
+  left: -1px;
+}
+.h-nav > div .h-r > ul li:nth-child(1) .item a {
+  display: block;
+  width: 74px;
+  height: 40px;
+  text-align: center;
+}
+.h-nav > div .h-r > ul li:nth-child(4) {
+  padding: 0 2px 0 5px;
+  height: 14px;
+  top: 9px;
+  border-left: 1px solid #bbb;
+}
+.h-nav > div .h-r > ul b {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 3px solid transparent;
+  top: 15px;
+  right: 6px;
+  border-top-color: #bbb;
+}
+.searchInput .logo {
+  width: 240px;
+  height: 90px;
+  text-align: center;
+  padding-top: 26px;
+}
+.searchInput .logo img {
+  width: 130px;
+  height: 48px;
+}
+.info {
+  position: relative;
+}
+.info .left {
+  float: left;
+  position: relative;
+  width: 460px;
+}
+.info .left .item {
+  position: relative;
+  height: 418px;
+  width: 418px;
+}
+.info .left .item .huakuai {
+  position: absolute;
+  background-color: rgba(3, 3, 3, 0.3);
+  left: 0;
+  top: 0;
+  display: none;
+}
+.info .left .item .active {
+  display: block!important;
+}
+.info .left .item img {
+  position: absolute;
+  height: 418px;
+  width: 418px;
+  display: none;
+}
+.info .left .tab {
+  margin-top: 1px;
+}
+.info .left .tab .active {
+  border-color: #000 !important;
+}
+.info .left .tab img {
+  width: 60px;
+  height: 60px;
+  margin-left: 16px;
+  margin-top: 22px;
+  border: 2px solid #fff;
+}
+.info .left .fdj {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 440px;
+  width: 418px;
+  height: 418px;
+  border: 1px solid red;
+  display: none;
+}
+.info .left .fdj .active {
+  display: block!important;
+}
+.info .left .fdj img {
+  display: none;
+  position: absolute;
+}
+.info .right {
+  float: left;
+  width: 530px;
+}
+.info .right .title {
+  padding: 20px 10px 12px;
+}
+.info .right .title h1 {
+  font-size: 16px;
+}
+.info .right .price {
+  width: 510px;
+  padding: 0 5px;
+  margin-right: 20px;
+  background: url("../img/bgi-1.png") no-repeat;
+}
+.info .right .price dl {
+  padding: 5px 0;
+  line-height: 32px;
+}
+.info .right .price dt,
+.info .right .price dd {
+  float: left;
+}
+.info .right .price dt {
+  font-size: 12px;
+  width: 69px;
+  margin-left: 8px;
+  vertical-align: middle;
+  color: #999999;
+}
+.info .right .price dd {
+  color: #ff0036;
+}
+.info .right .price dd span {
+  font-size: 24px;
+}
+.info .right .price dd em {
+  font-size: 18px;
+  font-style: normal;
+}
+.info .right .area dt,
+.info .right .area dd {
+  float: left;
+  font-size: 12px;
+  line-height: 36px;
+}
+.info .right .area dt {
+  color: #999999;
+  width: 50px;
+  height: 36px;
+  margin: 0 10px;
+}
+.info .right .sum input {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  width: 44px;
+}
+.info .right .sum span {
+  cursor: pointer;
+}
+/*# sourceMappingURL=info.css.map */
